@@ -287,8 +287,11 @@ pre {
 .block-zapoved {
     display: flex;
     justify-content: space-between;
-    padding: 0 270px;
+    align-items: center;
     margin-bottom: 20px;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .block-zapoved a {
@@ -598,4 +601,21 @@ pre {
 }
 .back {
    color: green !important;
+}
+
+
+@media (max-width: 800px){
+    .block-zapoved{
+        flex-direction: column;
+    }
+    .login{
+        font-size: 16px;
+    }
+    .blink{
+        font-size: 28px;
+
+    }
+    .main-content{
+        align-items: center;
+    }
 }

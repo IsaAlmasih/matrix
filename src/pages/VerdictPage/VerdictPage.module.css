@@ -1,0 +1,47 @@
+.wrapper{
+    background: black;
+    background-size: cover;
+    height: 50vh;
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 36px;
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+
+    transform: translate(-50%, -50%)
+}
+
+.buttons{
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+}
+.buttons a{
+    color: white;
+    padding: 20px;
+    font-size: 32px;
+    background-color: black;
+}
+
+@media (max-width: 1000px) {
+    .wrapper{
+        width: 80%;
+        font-size: 26px;
+    }
+    .buttons{
+        position: absolute;
+        left: 50%;
+        text-align: center;
+
+        transform: translateX(-50%);
+        bottom: 100px;
+    }
+}
