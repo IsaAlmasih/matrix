@@ -13,3 +13,8 @@ export const staticLinks = {
   votes: "/votes",
   work: "/work",
 };
+
+export const dynamicLinks = {
+  commandment: (id) => `/commandment/${id}`,
+  verdict: (id) => `/verdict/${id}`,
+};
