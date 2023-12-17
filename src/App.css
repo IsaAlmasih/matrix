@@ -1,38 +1,601 @@
-.App {
-  text-align: center;
+html {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+    margin: 0;
+    padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h3 {
+    margin: 0;
+    padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+    margin: 50px auto 0 auto;
+    display: flex;
+    background-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.second-block {
+    color: white;
+    margin: 0 auto;
+}
+
+
+.text {
+    color: rgb(3, 3, 51);
+    font-size: 100px;
+}
+
+
+.main-block-vote {
+    color: white;
+}
+
+
+img.planet {
+    animation: 0.1s linear 1s normal none infinite running planet;
+    -webkit-animation: 160s linear 0s normal none infinite running planet;
+}
+
+
+.main-block-vote {
+    width: 600px;
+    margin: 100px auto 0 auto;
+    text-align: center;
+}
+
+.block-question {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.block-answers {
+    display: flex;
+    justify-content: center;
+}
+
+.block-answer {
+    min-width: 100px;
+    background-color: unset;
+    color: white;
+    border: 1px solid grey;
+    margin: 10px 20px;
+    padding: 5px 0;
+    border-radius: 7px;
+}
+
+.btn-answer {
+    display: none;
+}
+
+.block-answer:hover {
+    background-color: #a4a4a4;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: #6262ff !important;
+}
+
+.header-site {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding: 10px 0;
+    margin: 0 200px;
+}
+
+.header-site div a {
+    font-size: 35px;
+}
+
+.block-login-user {
+    width: 500px;
+    margin: 200px auto 0 auto;
+    text-align: center;
+    border: 2px solid grey;
+    padding: 20px 0 60px 0;
+    border-radius: 10px;
+    font-size: 26px;
+}
+
+.label-auth {
+    margin-top: 20px !important;
+}
+
+.login {
+    font-size: 26px;
+    height: 30px;
+    width: 100%;
+}
+
+.password {
+    font-size: 20px;
+    height: 30px;
+    width: 100%;
+}
+
+.block-form-login {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.btn-login {
+    min-width: 100%;
+    background-color: unset;
+    color: white;
+    border: 1px solid grey;
+    padding: 8px 0;
+    border-radius: 7px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.btn-login:hover {
+    background-color: #a4a4a4;
+    color: black;
+}
+
+.text-create-acc {
+    font-size: 20px;
+}
+
+.blink {
+    -webkit-animation: blink 3s linear infinite;
+    animation: blink 3s linear infinite;
+    font-size: 56px;
+    font-weight: bold;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        color: rgb(0, 21, 103);
+    }
+    50% {
+        color: rgb(0, 38, 147);
+    }
+    100% {
+        color: rgb(0, 26, 128);
+    }
+}
+
+@keyframes blink {
+    0% {
+        color: rgb(0, 30, 128);
+    }
+    50% {
+        color: rgb(0, 27, 155);
+    }
+    100% {
+        color: rgb(0, 11, 128);
+    }
+}
+
+.attention {
+    width: 600px;
+    height: 120px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.main-profile {
+    margin: 70px 200px;
+}
+
+.container-texts {
+    display: flex;
+    align-items: start;
+    word-break: break-all;
+    flex-flow: row wrap;
+    border-top: 2px solid grey;
+    padding-top: 30px;
+}
+
+.block-text {
+    border: 2px solid grey;
+    max-width: 1000px;
+    min-width: 200px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.block-text pre {
+}
+
+.politic {
+    font-size: 20px;
+}
+
+.block-link-upload {
+    margin-top: 10px;
+}
+
+.block-link-upload div {
+    display: inline-block;
+}
+
+.btn-upload {
+    margin-right: 5px;
+    background-color: unset;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 7px;
+    padding: 3px 10px;
+}
+
+.btn-upload:hover {
+    background-color: #a4a4a4;
+    color: black;
+}
+
+.block-profile {
+    margin-bottom: 20px;
+}
+
+.btn-profile {
+    margin-right: 5px;
+    background-color: unset;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 7px;
+    padding: 3px 10px;
+    font-size: 18px;
+}
+
+
+.btn-profile:hover {
+    background-color: #a4a4a4;
+    color: black;
+}
+
+.main-block-result-vote {
+    margin: 100px auto 0 auto;
+    padding: 0 200px;
+}
+
+.block-user-answer {
+    border: 2px solid grey;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.text-user-answer {
+    font-size: 20px;
+}
+
+.block-zapoved {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 270px;
+    margin-bottom: 20px;
+}
+
+.block-zapoved a {
+    color: white !important;
+}
+
+.send-mail {
+    padding: 0 200px;
+    margin-top: 40px;
+}
+
+.list-message {
+    padding: 0 200px;
+    margin-top: 40px;
+}
+
+.block-btn {
+    margin-top: 20px;
+}
+
+.block-user-finance {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-block-finance {
+    margin: 30px 200px 0 200px;
+}
+
+
+.column {
+    float: left;
+    width: 10%;
+    background-color: #003fff;
+    margin-right: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.column:before {
+    content: "";
+    padding-top: 100%;
+    float: left;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.block-column {
+    margin-top: 50px;
+}
+
+.show-sent-message {
+    border-top: 2px solid grey;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.block-with-compil {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-with-compil div {
+    margin: 20px 5px 0;
+}
+
+#defaultCanvas0 {
+    margin: 0;
+    overflow: hidden !important;
+    background-color: black !important;
+    max-width: 100%;
+}
+
+.matrix-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.matrix-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.text_matrix {
+    color: #3E00F7 !important;
+}
+
+
+@keyframes pulsate {
+    50% {
+        text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #0020f0, 0 0 8px #0021f8;
+    }
+}
+
+.text_matrix {
+    text-decoration: none;
+    -webkit-animation: pulsate 2s linear infinite;
+    animation: pulsate 2s linear infinite;
+}
+
+
+.block-type-questions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-type {
+    border: 2px solid grey;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.block-type a {
+    color: white !important;
+}
+
+.block-type:hover {
+    background-color: gray;
+}
+
+.main-studying {
+    margin-top: 50px;
+    padding: 0 200px;
+}
+
+.border-index {
+    border: 2px solid gray;
+    padding: 3px 5px;
+    width: 100px;
+    text-align: center;
+}
+
+.border-index p {
+    padding: 0;
+    margin: 0;
+}
+
+.block-input {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.block-input label {
+    font-size: 24px;
+}
+
+.block-input input {
+    width: 100%;
+    height: 25px;
+}
+
+.politic {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+.select_role {
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.select_role h3 {
+    font-size: 23px;
+}
+
+.select_role p {
+    font-size: 20px;
+}
+
+.select_role select {
+    font-size: 18px;
+    width: 100%;
+}
+
+
+.main-content-work {
+    border-top: 2px solid gray;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+.textarea-text {
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.block-compil {
+    display: flex;
+    justify-content: space-between;
+}
+
+.compil {
+    margin-top: 15px;
+    border: 2px solid gray;
+    width: 30%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.text-compil {
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.input-text {
+    display: flex;
+}
+
+.select-block {
+    margin-left: 15px;
+}
+
+.select-type {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.btn-login {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#textArea {
+    margin-top: 10px;
+}
+
+.textarea-compil {
+    width: 98.6%;
+    height: 100px;
+}
+
+.block-buttons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.block-buttons div {
+    margin-right: 10px;
+}
+
+.btn-top {
+}
+
+.center-text {
+    width: 1000px;
+    margin: 150px auto;
+}
+
+.link-book button{
+    position: relative;
+    left: 70%;
+    margin-top: 100px;
+}
+
+.column-book {
+    float: left;
+    width: 30.33%;
+    height: 30px;
+    border: 2px solid gray;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.row-book:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text-member {
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+.back {
+   color: green !important;
 }

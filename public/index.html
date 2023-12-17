@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -9,35 +9,122 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Matrix</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js'></script>
+    <noscript></noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div id="planet"></div>
   </body>
+  <script>
+    const langs = [
+        '0101',
+        '10010',
+        '0011',
+        '11010',
+        '101',
+        'dfgdgfqt ',
+        '0101',
+        '10010',
+        '0011',
+        '11010',
+        'dfgfddf',
+        '1110',
+        '0101',
+        '10010',
+        '00gdfgdfgfdh11',
+        '11010',
+        '101',
+        'hdfhdfhfdh',
+    ];
+
+    let charSize = 20;
+    let fontSize = 48; // Размер шрифта для надписи "Matrix"
+    let fallRate = charSize / 2;
+    let streams;
+
+    class Char {
+        constructor(value, x, y, speed) {
+            this.value = value;
+            this.x = x;
+            this.y = y;
+            this.speed = speed;
+        }
+        draw() {
+            const flick = random(100);
+            // 10 percent chance of flickering a number instead
+            if (flick < 10) {
+                fill(255, 255, 255);
+                text(0, this.x, this.y);
+            } else {
+                text(this.value, this.x, this.y);
+            }
+
+            // fall down
+            this.y = this.y > height ? 0 : this.y + this.speed;
+        }
+    }
+    class Stream {
+        constructor(text, x) {
+            const y = random(text.length);
+            const speed = random(2, 10);
+            this.chars = [];
+
+            for (let i = text.length; i >= 0; i--) {
+                this.chars.push(
+                    new Char(text[i], x, (y + text.length - i) * charSize, speed)
+                );
+            }
+        }
+        draw() {
+            fill(255, 255, 255);
+            this.chars.forEach((c, i) => {
+                const lit = random(100);
+                if (lit < 30) {
+                    if (i === this.chars.length - 1) {
+                        fill(255, 255, 255);
+                    } else {
+                        fill(255, 255, 255);
+                    }
+                }
+
+                c.draw();
+            });
+        }
+    }
+    function createStreams() {
+        for (let i = 0; i < width; i += charSize) {
+            streams.push(new Stream(random(langs), i));
+        }
+    }
+    function reset() {
+        streams = [];
+        createStreams();
+    }
+    function setup() {
+        createCanvas(innerWidth, innerHeight);
+        reset();
+        frameRate(20);
+        colorMode(HSB);
+        noStroke();
+        textSize(charSize);
+        textFont("monospace");
+        textAlign(CENTER, CENTER);
+        background(0);
+    }
+
+    function draw() {
+        background(0, 0.4);
+        streams.forEach((s) => s.draw());
+    }
+
+    function windowResized() {
+        resizeCanvas(innerWidth, innerHeight);
+        background(0);
+        reset();
+    }
+</script>
+<script src="./js/three.min.js"></script>
+<script src="./js/my4.js"></script>
 </html>
