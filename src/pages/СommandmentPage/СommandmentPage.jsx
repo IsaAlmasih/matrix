@@ -4,10 +4,10 @@ import {Link} from "react-router-dom";
 import {staticLinks} from "../../config/routingsLinks";
 
 const langs = [
-  '0101', '10010', '0011', '11010', '101', 'dfgdgfqt ',
-  '0101', '10010', '0011', '11010', 'dfgfddf', '1110',
-  '0101', '10010', '00gdfgdfgfdh11', '11010', '101',
-  'hdfhdfhfdh',
+  '010011010111', '100100101011', '011110110101', '110011101010', '101100111111', '110011100010',
+  '010010101111', '100100101010', '001001100001', '110010101110', '001010101001', '110100000110',
+  '011010101001', '100110111110', '010101010101', '110010101110', '100000011111',
+
 ];
 
 const Char = ({ value, x, y, speed }) => {
@@ -27,9 +27,11 @@ const Char = ({ value, x, y, speed }) => {
   const char = flick < 10 ? 0 : value;
 
   return (
-      <span  style={{ position: 'absolute', left: x, top: yPos, color: '#0D16C4' }}>
-            {char}
-        </span>
+    <span
+      style={{ position: "absolute", left: x, top: yPos, color: "#07085A" }}
+    >
+      {char}
+    </span>
   );
 };
 
@@ -38,7 +40,7 @@ const Stream = ({ text, x }) => {
 
   useEffect(() => {
     const y = Math.floor(Math.random() * text.length);
-    const speed = Math.floor(Math.random() * 2) + 4;
+    const speed = Math.floor(Math.random() * 6) + 3;
     const charArray = [];
 
     for (let i = text.length - 1; i >= 0; i--) {
@@ -89,16 +91,27 @@ const MatrixRain = () => {
 
 const СommandmentPage = () => {
   return (
-      <>
-        <div className={style.wrapper}>Я, Всевышний Иисус Христос, Бог твой, Который Привёл тебя в Дом Свой как Клялся отцам твоим народу Моему Израилю. Да не будет у вас иных богов Пред Лицом Моим</div>
-        <MatrixRain></MatrixRain>
-        <div className={style.buttons}>
-          <Link to={staticLinks.main}>Назад</Link>
-          <Link to={"http://isav.su/"}>Книги</Link>
-        </div>
-      </>
-
-  )
+    <>
+      <div className={style.wrapper}>
+        Я, Всевышний Иисус Христос, Бог твой, Который Привёл тебя в Дом Свой как
+        Клялся отцам твоим народу Моему Израилю. Да не будет у вас иных богов
+        Пред Лицом Моим
+      </div>
+      <div className={style.wrapper}>
+        2. Заповедь новую Даю вам: любите друг друга как Я Полюбил вас.
+      </div>
+      <div className={style.wrapper}>
+        Я, Всевышний Иисус Христос, Бог твой, Который Привёл тебя в Дом Свой как
+        Клялся отцам твоим народу Моему Израилю. Да не будет у вас иных богов
+        Пред Лицом Моим
+      </div>
+      <MatrixRain></MatrixRain>
+      <div className={style.buttons}>
+        <Link to={staticLinks.planet}>Назад</Link>
+        <Link to={"http://isav.su/"}>Книги</Link>
+      </div>
+    </>
+  );
 }
 
 export default СommandmentPage

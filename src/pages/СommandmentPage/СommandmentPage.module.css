@@ -1,14 +1,14 @@
 .wrapper{
-    background: black;
-    background-size: cover;
-    height: 50vh;
-    width: 40%;
+    /* background: black; */
+    /* background-size: cover;
+    height: 40vh;
+    width: 30%; */
     margin: 0 auto;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(9, 5, 89);
     font-size: 36px;
     position: absolute;
     z-index: 20;
