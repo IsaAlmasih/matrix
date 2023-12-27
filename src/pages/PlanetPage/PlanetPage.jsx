@@ -112,12 +112,12 @@ const PlanetPage = () => {
     <div>
       <div className="main-content">
         <div className="attention">
-          <Link className="login">
+          <Link to="/" className="login">
             <p className="blink back">Остаться в мире</p>
           </Link>
         </div>
         <div className="attention">
-          <Link className="login">
+          <Link to="/login"className="login">
             <p className="blink">Войти в матрицу</p>
           </Link>
         </div>
