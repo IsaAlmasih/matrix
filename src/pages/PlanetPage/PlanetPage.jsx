@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import VerdictList from "../../components/VerdictList/VerdictList";
 import CommandmentsList from "../../components/CommandmentsList/CommandmentsList";
 import { Link } from "react-router-dom";
+import { staticLinks } from "../../config/routingsLinks";
 
 const PlanetPage = () => {
   const verdictArr = [
@@ -117,12 +118,12 @@ const PlanetPage = () => {
           </Link>
         </div>
         <div className="attention">
-          <Link to="/login"className="login">
+          <Link to="/login" className="login">
             <p className="blink">Войти в матрицу</p>
           </Link>
         </div>
         <div className="attention">
-          <Link className="login">
+          <Link to={staticLinks.study} className="login">
             <p className="blink">На сайт</p>
           </Link>
         </div>

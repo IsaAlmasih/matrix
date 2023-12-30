@@ -28,7 +28,7 @@ const Char = ({ value, x, y, speed }) => {
 
     return (
       <span
-        style={{ position: "absolute", left: x, top: yPos, color: "#191970" }}
+        style={{ position: "absolute", left: x, top: yPos, color: "#0000FF" }}
       >
         {char}
       </span>
