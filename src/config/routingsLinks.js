@@ -12,9 +12,12 @@ export const staticLinks = {
   verdict: "/verdict/:id",
   votes: "/votes",
   work: "/work",
+  studylist: "/studylist",
+  studypage: "/studypage/:id",
 };
 
 export const dynamicLinks = {
   commandment: (id) => `/commandment/${id}`,
-  verdict: (id) => `/verdict/${id}`,
+  verdict: (id) => `/verdict/${id}`, 
+  studypage: (id) => `/studypage/${id}`,
 };

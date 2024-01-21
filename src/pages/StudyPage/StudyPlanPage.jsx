@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import styles from "./StudyPlanPage.module.css";
 import { Link } from "react-router-dom";
-import styles from "./StudyPage.module.css";
-import { dynamicLinks, staticLinks } from "../../config/routingsLinks";
-
+import { useNavigate } from "react-router-dom";
 
 const langs = [
   "010000010111",
@@ -119,30 +119,81 @@ const MatrixRain = () => {
   );
 };
 
-const studies = {
-  1: "Всевышний",
-  2: "Природа",
-  3: "Культура",
-  4: "Наука",
-};
-const studiesArr = [
-  { id: 1, title: "Всевышний" },
-  { id: 2, title: "Природа" },
-  { id: 3, title: "Культура" },
-  { id: 4, title: "Наука" },
-];
+function StudyPlanPage() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const studies = {
+    1: "Всевышний",
+    2: "Природа",
+    3: "Культура",
+    4: "Наука",
+  };
 
-function StudyPage() {
+  const studiesdesc = {
+    1: [
+      "Всевышний",
+      "Всевышний",
+      "Всевышний",
+      "Всевышний",
+      "Всевышний",
+      "Всевышний",
+      "Всевышний",
+      "Всевышний",
+    ],
+    2: [
+      "Природа",
+      "Природа",
+      "Природа",
+      "Природа",
+      "Природа",
+      "Природа",
+      "Природа",
+      "Природа",
+      "Природа",
+      "Природа",
+    ],
+    3: [
+      "Культура",
+      "Культура",
+      "Культура",
+      "Культура",
+      "Культура",
+      "Культура",
+      "Культура",
+      "Культура",
+      "Культура",
+    ],
+    4: [
+      {id: 1, title: "Наука"},
+      {id: 1, title: "Наука"},
+      {id: 1, title: "Наука"},
+      {id: 1, title: "Наука"},
+      {id: 1, title: "Наука"},
+      {id: 1, title: "Наука"},
+      {id: 1, title: "Наука"},
+      {id: 1, title: "Наука"},
+      {id: 1, title: "Наука"},
+      {id: 1, title: "Наука"},
+      {id: 1, title: "Наука"},
+      {id: 1, title: "Наука"},
+    ],
+  };
+
   return (
     <>
-      <h1 className={styles.title}>Выбирите тему обучения.</h1>
+      <button onClick={() => navigate(-1)} className={styles.button}>
+          {"<--"}Назад
+      </button>
       <div className={styles.wrapper}>
-        {studiesArr.map((item) => (
-          <Link to={`${dynamicLinks.studypage(item.id)}`}>{item.title}</Link>
-        ))}
+        <h1 className={styles.title}>{studies[id]}</h1>
+        <div className={styles.wrapperList}>
+          {studiesdesc[id].map((item) => (
+            <Link>{item.title}</Link>
+          ))}
+        </div>
       </div>
     <MatrixRain></MatrixRain></>
   );
 }
 
-export default StudyPage;
+export default StudyPlanPage;

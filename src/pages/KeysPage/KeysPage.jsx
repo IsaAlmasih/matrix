@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const KeysPage = () => {
-  return (
-    <div>KeysPage</div>
-  )
-}
+  return <div>KeysPage</div>;
+};
 
-export default KeysPage
+export default KeysPage;
