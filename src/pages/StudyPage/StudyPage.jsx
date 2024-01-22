@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./StudyPage.module.css";
 import { dynamicLinks, staticLinks } from "../../config/routingsLinks";
+import { useNavigat } from "react-router-dom";
 
 
 const langs = [
@@ -125,15 +126,19 @@ const studies = {
   3: "Культура",
   4: "Наука",
 };
+
 const studiesArr = [
-  { id: 1, title: "Всевышний" },
-  { id: 2, title: "Природа" },
-  { id: 3, title: "Культура" },
-  { id: 4, title: "Наука" },
+  { id: 1, title: "Всевышний." },
+  { id: 2, title: "Природа." },
+  { id: 3, title: "Культура." },
+  { id: 4, title: "Наука." },
 ];
 
 function StudyPage() {
   return (
+    // <button onClick={() => navigate(-1)} className={styles.button}>
+    //       {"<--"}Назад
+    //   </button>
     <>
       <h1 className={styles.title}>Выбирите тему обучения.</h1>
       <div className={styles.wrapper}>
