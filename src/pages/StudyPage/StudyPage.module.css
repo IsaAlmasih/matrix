@@ -7,15 +7,27 @@
 
 }
 .wrapper a {
-    color: white!important;
-border: 1px solid white;
-border-radius: 5px;
-margin: 0 10px;
-padding: 5px;
+  font-size: 30px;
+  color: rgb(8, 0, 255) !important;
+  border: 1px solid rgb(8, 0, 255);
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 5px;
 
 }
 .title {
-   color: white!important;
+   font-size: 60px;
+   color: rgb(0, 34, 255)!important;
    text-align: center;
    margin-top: 400px;
+}
+.button {
+    font-size: 20px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: rgb(254, 7, 7);
+    background-color: transparent;
+    border: 30;
+    z-index: 100;
 }
