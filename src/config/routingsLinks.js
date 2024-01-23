@@ -14,10 +14,18 @@ export const staticLinks = {
   work: "/work",
   studylist: "/studylist",
   studypage: "/studypage/:id",
+  themepage: "/themepage/:id",
+  mainbookpage: "/books/",
+  bookspage: "/books/list/",
+  bookpage: "/books/books/id",
+  personalpage: "/books/personalpage/",
+  mabooks: "/books/mabooks/",
+  constuctor: "/books/constuctor/",
 };
 
 export const dynamicLinks = {
   commandment: (id) => `/commandment/${id}`,
-  verdict: (id) => `/verdict/${id}`, 
+  verdict: (id) => `/verdict/${id}`,
   studypage: (id) => `/studypage/${id}`,
+  themepage: (id) => `/themepage/${id}`,
 };

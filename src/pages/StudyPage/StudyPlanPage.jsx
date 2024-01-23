@@ -160,17 +160,17 @@ function StudyPlanPage() {
     ],
     3: [
       { id: 1, title: "Математика." },
-      { id: 1, title: "Физика" },
-      { id: 1, title: "Химия" },
-      { id: 1, title: "Библия" },
-      { id: 1, title: "Культуралогия" },
-      { id: 1, title: "Физкультура" },
-      { id: 1, title: "Обществознание" },
-      { id: 1, title: "Культура" },
-      { id: 1, title: "Флора" },
-      { id: 1, title: "Культура" },
-      { id: 1, title: "Фауна" },
-      { id: 1, title: "Культура" },
+      { id: 2, title: "Физика" },
+      { id: 3, title: "Химия" },
+      { id: 4, title: "Библия" },
+      { id: 5, title: "Культуралогия" },
+      { id: 6, title: "Физкультура" },
+      { id: 7, title: "Обществознание" },
+      { id: 8, title: "Культура" },
+      { id: 9, title: "Флора" },
+      { id: 10, title: "Культура" },
+      { id: 11, title: "Фауна" },
+      { id: 12, title: "Культура" },
     ],
     4: [
       { id: 1, title: "Программирование" },
@@ -197,7 +197,7 @@ function StudyPlanPage() {
         <h1 className={styles.title}>{studies[id]}</h1>
         <div className={styles.wrapperList}>
           {studiesdesc[id].map((item) => (
-            <Link>{item.title}</Link>
+            <Link to={`/themepage/${item.id}`}>{item.title}</Link>
           ))}
         </div>
       </div>

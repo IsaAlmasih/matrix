@@ -38,9 +38,6 @@ const MainStudyPage = () => {
           <Link className="login" to="/studylist/">
             Учение.
           </Link>
-          <Link className="login" to="/studylist/">
-            Практика.
-          </Link>
         </div>
       </div>
     </>

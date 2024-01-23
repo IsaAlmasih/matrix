@@ -135,18 +135,20 @@ const studiesArr = [
 ];
 
 function StudyPage() {
+  const navigate=useNavigate()
   return (
-    // <button onClick={() => navigate(-1)} className={styles.button}>
-    //       {"<--"}Назад
-    //   </button>
     <>
+      <button onClick={() => navigate(-1)} className={styles.button}>
+        {"<--"}Назад
+      </button>{" "}
       <h1 className={styles.title}>Выбирите тему обучения.</h1>
       <div className={styles.wrapper}>
         {studiesArr.map((item) => (
           <Link to={`${dynamicLinks.studypage(item.id)}`}>{item.title}</Link>
         ))}
       </div>
-    <MatrixRain></MatrixRain></>
+      <MatrixRain></MatrixRain>
+    </>
   );
 }
 

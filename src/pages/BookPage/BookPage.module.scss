@@ -1,0 +1,14 @@
+.bookpage {
+  // background-color: rgb(255, 0, 4);
+  background: radial-gradient(
+    circle at center,
+    hsl(0, 14%, 97%),
+    hsl(229, 88%, 46%)
+  );
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

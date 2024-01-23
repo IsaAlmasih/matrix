@@ -80,7 +80,7 @@ img.planet {
 
 a {
   text-decoration: none;
-  color: #6262ff !important;
+  color: #0404f8 !important;
 }
 
 .header-site {
@@ -112,7 +112,7 @@ a {
 .header-site {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgb(14, 7, 146);
+  border-bottom: 1px solid rgb(13, 0, 255);
   padding: 10px 0;
   margin: 0 200px;
 }

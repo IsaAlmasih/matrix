@@ -1,0 +1,59 @@
+$brown: #a87328;
+$darkblue: #0c347d;
+$umber: #54290c;
+$springer: #eded80;
+
+.bookshelf {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 10px $brown solid;
+  overflow: hidden;
+  background-image: linear-gradient(
+    darken($brown, 32%),
+    darken($brown, 30%) 220px,
+    lighten($brown, 4%) 220px,
+    lighten($brown, 4%) 222px,
+    $brown 222px,
+    $brown 228px,
+    darken($brown, 4%) 228px,
+    darken($brown, 4%) 230px
+  );
+  background-size: 10px 230px;
+  box-shadow: 0px 1000px 0px 400px #7a7668;
+}
+
+.book {
+  height: 200px;
+  width: 40px;
+  float: left;
+  color: white;
+  font-size: 0.9em;
+  font-family: Verdana, sans-serif;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  transition: transform 0.4s ease;
+}
+
+.book-tilted > .book {
+  transform: translateY(-3px) translateX(15px) rotate(9deg);
+}
+
+.book:hover {
+  transform: scale(1.05);
+}
+
+.book-green {
+  background-color: darkgreen;
+  border-left: 2px solid lighten(darkgreen, 4%);
+  border-right: 2px solid darken(darkgreen, 4%);
+}
+
+.book h2 {
+  padding: 0;
+  font-size: 1em;
+  transform-origin: 0% 0%;
+  transform: rotate(0.25turn) translateY(-35px);
+  width: 170px;
+}

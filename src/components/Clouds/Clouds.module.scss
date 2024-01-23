@@ -1,0 +1,80 @@
+@keyframes clouds-loop-1 {
+  to {
+    background-position: -1000px 0;
+  }
+}
+
+@keyframes clouds-loop-2 {
+  to {
+    background-position: -1000px 0;
+  }
+}
+
+@keyframes clouds-loop-3 {
+  to {
+    background-position: -1579px 0;
+  }
+}
+
+.clouds1 {
+  background-image: url(https://s.cdpn.io/15514/clouds_2.png);
+  animation: clouds-loop-1 60s infinite linear;
+}
+
+.clouds2 {
+  background-image: url(https://s.cdpn.io/15514/clouds_1.png);
+  animation: clouds-loop-2 55s infinite linear;
+}
+
+.clouds3 {
+  background-image: url(https://s.cdpn.io/15514/clouds_3.png);
+  animation: clouds-loop-3 68s infinite linear;
+}
+
+html,
+body {
+  font-family: "Oswald", sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  // background: linear-gradient(#333, #000);
+  // background: #ffffff;
+  // text-align: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
+
+.clouds {
+  opacity: 0.4;
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.clouds1,
+.clouds2,
+.clouds3 {
+  // background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background-size: cover;
+
+  @media (max-width: 1400px) {
+    background-size: cover;
+  }
+
+  @media (max-width: 380px) {
+    background-size: cover;
+  }
+}

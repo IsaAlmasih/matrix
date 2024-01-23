@@ -1,0 +1,46 @@
+.book {
+  overflow: hidden;
+  position: static;
+  height: 15rem;
+  margin: 3px;
+  cursor: pointer;
+  transition: margin 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  filter: grayscale(25%);
+  border-radius: 00px;
+  background: rgb(21, 167, 60);
+  box-shadow: 0 0.5rem 1rem 0rem rgba(0, 0, 0, 0.4);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-image-slice: 1;
+  order: 200;
+  writing-mode: vertical-rl;
+  text-align: center;
+  width: 50px;
+}
+.book:hover {
+  box-shadow: 0 0.5rem 3rem -0.5rem rgba(161, 5, 5, 0.4);
+  z-index: 10;
+  margin-top: -10px;
+  transform: scale(1.03, 1.03);
+}
+.light-black {
+  background: rgb(52, 48, 48);
+
+  color: aliceblue; // Цвета текста.
+}
+.dark-purple {
+  background-color: aqua;
+}
+.dull-pink {
+  background-color: beige;
+}
+.dark-green {
+  background-color: burlywood;
+}
+.dark-red {
+  background-color: brown;
+}
+.light-gray {
+  background-color: chartreuse;
+}

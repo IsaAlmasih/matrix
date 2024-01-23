@@ -1,0 +1,81 @@
+.book {
+  position: relative;
+  //   Тут можно пофантазировать с картинкой.
+  background: url("../../assets/img/book2.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 760px;
+  height: 500px;
+  margin: auto;
+  margin-bottom: 110px;
+  //   top: calc((100vh - 700px) / 2);
+  border-radius: 10px;
+}
+.book:hover {
+  cursor: pointer;
+}
+.FlipBookContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FlipBookContainer .demoPage {
+  transition: all 0s ease !important;
+  color: rgb(235, 9, 9) !important;
+}
+
+.FlipBookContainer .demoPage .text-container {
+  width: 80%;
+  height: 450px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.FlipBookContainer .demoPage .text-container > div:nth-child(1) {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -2px;
+  padding-bottom: 20px;
+}
+
+.FlipBookContainer .demoPage .text-container > div:nth-child(2) {
+  font-family: "Pacifico";
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.FlipBookContainer .demoPage .text-container > div:nth-child(2) > div {
+  width: 28%;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.FlipBookContainer .demoPage .text-container > div:nth-child(2) img {
+  width: 100%;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.FlipBookContainer .demoPage .text-container > div:nth-child(2) img:hover {
+  transform: scale(0.95);
+  opacity: 1;
+}
+.videobook {
+  width: 300px;
+  height: 250px;
+}
+
+.book-scaled {
+  transform: scale(2);
+  translate: 0 -150px;
+}
