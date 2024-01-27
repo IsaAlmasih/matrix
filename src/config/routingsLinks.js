@@ -21,6 +21,7 @@ export const staticLinks = {
   personalpage: "/books/personalpage/",
   mabooks: "/books/mabooks/",
   constuctor: "/books/constuctor/",
+  portfoliopage: "/portfolio/",
 };
 
 export const dynamicLinks = {

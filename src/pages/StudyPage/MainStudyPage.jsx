@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./MainStudyPage.module.css";
+import { staticLinks } from "../../config/routingsLinks";
 
 const MainStudyPage = () => {
   return (
@@ -37,6 +38,9 @@ const MainStudyPage = () => {
           </Link>
           <Link className="login" to="/studylist/">
             Учение.
+          </Link>
+          <Link className="login" to={staticLinks.portfoliopage}>
+            Портфолио.
           </Link>
         </div>
       </div>

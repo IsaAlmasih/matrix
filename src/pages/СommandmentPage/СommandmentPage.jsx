@@ -117,7 +117,7 @@ const{id}=useParams()
      <MatrixRain></MatrixRain>
      <div className={style.buttons}>
        <Link to={staticLinks.planet}>Назад</Link>
-       <Link to={"http://isav.su/"}>Книги</Link>
+       <Link to={staticLinks.mainbookpage}>Книги</Link>
      </div>
    </>
  );

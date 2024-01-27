@@ -16,12 +16,13 @@ import VotesPage from "../pages/VotesPage/VotesPage";
 import { WorkPage } from "../pages/WorkPage/WorkPage";
 import StudyPlanPage from "../pages/StudyPage/StudyPlanPage";
 import ThemePage from "../pages/StudyPage/ThemePage/ThemePage";
-import MainPagebook from "../pages/MainPageBooks/MainPage";
 import BooksPage from "../pages/BooksPage/BooksPage";
 import BookPage from "../pages/BookPage/BookPage";
 import PersonalPage from "../pages/PersonalPage/PersonalPage";
 import MyBooksPage from "../pages/MyBooksPage/MyBooksPage";
 import ConstructorPage from "../pages/ConstructorPage/ConstructorPage";
+import MainPageBook from "../pages/MainPageBooks/MainPage";
+import PortfolioPage from "../pages/PortfolioPage/PortfolioPage";
 
 export const publicRoutes = [
   {
@@ -90,26 +91,30 @@ export const publicRoutes = [
   },
   {
     path: staticLinks.mainbookpage,
-    element: <MainPagebook></MainPagebook>
+    element: <MainPageBook></MainPageBook>,
   },
   {
     path: staticLinks.bookspage,
-    element: <BooksPage></BooksPage>
+    element: <BooksPage></BooksPage>,
   },
   {
     path: staticLinks.bookpage,
-    element: <BookPage></BookPage>
+    element: <BookPage></BookPage>,
   },
   {
     path: staticLinks.personalpage,
-    element: <PersonalPage></PersonalPage>
+    element: <PersonalPage></PersonalPage>,
   },
   {
     path: staticLinks.mabooks,
-    element: <MyBooksPage></MyBooksPage>
+    element: <MyBooksPage></MyBooksPage>,
   },
   {
     path: staticLinks.constuctor,
-    element: <ConstructorPage></ConstructorPage>
+    element: <ConstructorPage></ConstructorPage>,
   },
+  {
+    path: staticLinks.portfoliopage,
+    element: <PortfolioPage></PortfolioPage>
+  }
 ];
