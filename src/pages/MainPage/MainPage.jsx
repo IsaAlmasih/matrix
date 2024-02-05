@@ -81,11 +81,21 @@ const MatrixRain = () => {
     };
 
     return (
-        <div style={{ background: 'rgba(0, 0, 0, 0.4)', position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', overflow: 'hidden' }}>
-            {streams.map((stream, index) => (
-                <Stream key={index} text={stream.text} x={stream.x} />
-            ))}
-        </div>
+      <div
+        style={{
+          background: "color: rgb(8, 0, 255)",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
+        }}
+      >
+        {streams.map((stream, index) => (
+          <Stream key={index} text={stream.text} x={stream.x} />
+        ))}
+      </div>
     );
 };
 

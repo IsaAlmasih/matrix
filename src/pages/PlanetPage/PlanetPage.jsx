@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import VerdictList from "../../components/VerdictList/VerdictList";
 import CommandmentsList from "../../components/CommandmentsList/CommandmentsList";
 import { Link } from "react-router-dom";
@@ -110,28 +110,30 @@ const PlanetPage = () => {
   //   };
   // }, []);
   return (
-    <div>
-      <div className="main-content">
-        <div className="attention">
-          <Link to="/" className="login">
-            <p className="blink back">Остаться в мире</p>
-          </Link>
+    <>
+      <div>
+        <div className="main-content">
+          <div className="attention">
+            <Link to="/" className="login">
+              <p className="blink back">Остаться в мире</p>
+            </Link>
+          </div>
+          <div className="attention">
+            <Link to="/login" className="login">
+              <p className="blink">Войти в матрицу</p>
+            </Link>
+          </div>
+          <div className="attention">
+            <Link to={staticLinks.study} className="login">
+              <p className="blink">На сайт</p>
+            </Link>
+          </div>
         </div>
-        <div className="attention">
-          <Link to="/login" className="login">
-            <p className="blink">Войти в матрицу</p>
-          </Link>
-        </div>
-        <div className="attention">
-          <Link to={staticLinks.study} className="login">
-            <p className="blink">На сайт</p>
-          </Link>
-        </div>
+        {/*<div id="planet" ref={planetRef}></div>*/}
+        <VerdictList verdict={verdictArr}></VerdictList>
+        <CommandmentsList commandments={verdictArr}></CommandmentsList>
       </div>
-      {/*<div id="planet" ref={planetRef}></div>*/}
-      <VerdictList verdict={verdictArr}></VerdictList>
-      <CommandmentsList commandments={verdictArr}></CommandmentsList>
-    </div>
+    </>
   );
 };
 

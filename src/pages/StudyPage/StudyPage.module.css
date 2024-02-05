@@ -7,7 +7,7 @@
 
 }
 .wrapper a {
-  font-size: 30px;
+  font-size: 40px;
   color: rgb(8, 0, 255) !important;
   border: 1px solid rgb(8, 0, 255);
   border-radius: 5px;
@@ -15,7 +15,7 @@
   padding: 5px;
 }
 .title {
-   font-size: 60px;
+   font-size: 50px;
    color: rgb(8, 0, 255)!important;
    text-align: center;
    margin-top: 400px;
