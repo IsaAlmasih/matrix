@@ -130,7 +130,7 @@ const MainStudyPage = () => {
             </Link>
           </div>
           <div>
-            <Link className="login" to="/profile/work">
+            <Link className="login" to="/work/">
               Работа
             </Link>
           </div>

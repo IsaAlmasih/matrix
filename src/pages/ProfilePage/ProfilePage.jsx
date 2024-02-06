@@ -124,15 +124,14 @@ export const ProfilePage = () => {
   return (
     // <h2 className={styles.title}>
     <>
-    <div className={styles.wrapper}>
-      <Link to={"/study/"}> В матрицу </Link>
-      <Link to={"/work/"}>Работа.</Link>
-      <Link>Услуги.</Link>
-      <Link> Сеть. </Link>
-      <Link> Финансы. </Link>
-    </div>
-    <MatrixRain></MatrixRain>
+      <div className={styles.wrapper}>
+        <Link to={"/study/"}> В матрицу </Link>
+        <Link to={"/work/"}>Работа.</Link>
+        <Link to={"/studylist/"}>Учёба.</Link>
+        <Link> В гости </Link>
+        <Link> В мир. </Link>
+      </div>
+      <MatrixRain></MatrixRain>
     </>
-    
   );
 };

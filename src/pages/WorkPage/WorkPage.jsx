@@ -122,16 +122,16 @@ export const WorkPage = () => {
 
   return (
     <>
-    <div className={styles.wrapper}>
-      <Link to={"/study/"}> В матрицу </Link>
-      <Link to={"/work/"}>Работа.</Link>
-      <Link>Услуги.</Link>
-      <Link> Сеть. </Link>
-      <Link> Финансы. </Link>
-    </div>
-    <MatrixRain></MatrixRain>
+      <div className={styles.wrapper}>
+        <Link to={"/study/"}> В матрицу </Link>
+        <Link to={"/work/"}>Работа.</Link>
+        <Link to={"/profile/"}>Профиль.</Link>
+        <Link> Сеть. </Link>
+        <Link> Финансы. </Link>
+      </div>
+      <MatrixRain></MatrixRain>
+      <div className={styles.wrappe}>Благотворительный Фонд "СДС и ОУ"</div>
     </>
-    
   );
 
 }

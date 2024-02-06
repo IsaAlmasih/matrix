@@ -153,15 +153,15 @@ const VerdictPage = () => {
   const {id} = useParams()
 
   return (
-      <>
-        <div className={style.wrapper}>{verdictData[id]}</div>
-        <MatrixRain></MatrixRain>
-        <div className={style.buttons}>
-          <Link to={staticLinks.planet}>Назад</Link>
-          <Link to={"http://isav.su/"}>Книги</Link>
-        </div>
-      </>
-  )
+    <>
+      <div className={style.wrapper}>{verdictData[id]}</div>
+      <MatrixRain></MatrixRain>
+      <div className={style.buttons}>
+        <Link to={staticLinks.planet}>Назад</Link>
+        <Link to={staticLinks.mainbookpage}>Книги</Link>
+      </div>
+    </>
+  );
 }
 
 export default VerdictPage
