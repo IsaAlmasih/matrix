@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  justify-content:space-around;
+  border-bottom: 1px solid rgb(8, 0, 255);
+  padding-left: 50px;
+  padding-right: 20px;
+  position: relative;
+  font-size: 40px;
+  text-align: center;
+  z-index: 10;
+}
+body {
+  overflow: hidden;
+  height: 100vh;
+}

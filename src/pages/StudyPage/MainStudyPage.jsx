@@ -107,6 +107,7 @@ const MatrixRain = () => {
         top: 0,
         left: 0,
         width: "100%",
+        zIndex: -1,
         height: "100%",
         overflow: "hidden",
       }}
@@ -122,44 +123,48 @@ const MainStudyPage = () => {
   return (
     <>
       <>
-      <div className="header-site">
-        <div>
-          <Link className="login" to="/profile/studying">
-            Учёба
-          </Link>
-        </div>
-        <div>
-          <Link className="login" to="/profile/work">
-            Работа
-          </Link>
-        </div>
-        <div>
-          <Link className="login" to="/profile/">
-            Профиль
-          </Link>
-        </div>
-        <div>
+        <div className="header-site">
           <div>
-            <Link className="login" to="/user/logout/">
+            <Link className="login" to="/profile/studying">
+              Учёба
+            </Link>
+          </div>
+          <div>
+            <Link className="login" to="/profile/work">
+              Работа
+            </Link>
+          </div>
+          <div>
+            <Link className="login" to="/profile/">
+              Профиль
+            </Link>
+          </div>
+          <div>
+            <div>
+              {/* <Link className="login" to="/user/logout/">
               Выйти
+            </Link> */}
+              <Link className="login" to="/">
+                Выйти
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className={styles.linkWrapper}>
+            <Link className="login" to="/studylist/">
+              Учение.
+            </Link>
+            <Link className="login" to="/studypage/4">
+              Услуги.
+            </Link>
+            <Link className="login" to={staticLinks.portfoliopage}>
+              Сеть.
             </Link>
           </div>
         </div>
-      </div>
-      <div>
-        <div className={styles.linkWrapper}>
-          <Link className="login" to="/studylist/">
-            Учение.
-          </Link>
-          <Link className="login" to="/studypage/4">
-            Услуги.
-          </Link>
-          <Link className="login" to={staticLinks.portfoliopage}>
-            Сеть.
-          </Link>
-        </div>
-      </div>
       </>
+      <MatrixRain></MatrixRain>
     </>
   );
 };
